@@ -1,0 +1,10 @@
+nodejs, nvm, npm: https://nodejs.org/en/download/package-manager
+yarn add react-bootstrap bootstrap
+yarn add react-router-dom@6
+npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
+npm install formik --save
+
+Extensions:
+Prettier
+ES7+React/Redux
+indent-rainbow
