@@ -7,6 +7,9 @@ django-allauth
 django-crispy-forms
 crispy_bootstrap4
 djangorestframework
+markdown
+django-filter
+
 django-cors-headers
 
 django-widget-tweaks
