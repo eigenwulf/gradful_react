@@ -2,16 +2,14 @@ import React from "react";
 
 import Header from "../components/Header";
 import LandingSection from "../components/LandingSection";
-import Footer from "../components/Footer";
-import { Container, Box, } from "@chakra-ui/react";
+// import Footer from "../components/Footer";
 
-function Home() {
+function Personalize() {
     return (
-    <Container maxW='1000px'>
+    <>
         <Header />
         <LandingSection />
-        <Footer />
-    </Container>
+    </>
     );  
     }
-export default Home;
+export default Personalize;

@@ -1,29 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import {
-    faGithub,
-    faLinkedin,
-    faMedium,
-    faStackOverflow,
-} from "@fortawesome/free-brands-svg-icons";
-import { Box, HStack } from "@chakra-ui/react";
 
-const socials = [
-    {
-        icon: faEnvelope,
-        url: "mailto: hello@example.com",
-    },
-    {
-        icon: faGithub,
-        url: "https://github.com",
-    },
-    {
-        icon: faStackOverflow,
-        url: "https://stackoverflow.com",
-    },
-    ];
+import gradful_logo_temp from '../images/gradful_logo_temp.gif'
+import { Box, Heading, HStack, Text } from "@chakra-ui/react";
+import { Routes, Route, Link } from "react-router-dom";
 
+import { Link as ReactRouterLink } from 'react-router-dom'
+import { Link as ChakraLink, LinkProps } from '@chakra-ui/react'
 
 const Header = () => {
     const handleClick = (anchor) => () => {
@@ -38,43 +22,39 @@ const Header = () => {
     };
 
     return (
-        <Box
-            position="fixed"
-            top={0}
-            left={0}
-            right={0}
-            translateY={0}
-            transitionProperty="transform"
-            transitionDuration=".3s"
-            transitionTimingFunction="ease-in-out"
-            backgroundColor="#18181b" >
-        <Box color="white" maxWidth="1280px" margin="0 auto">
-
+        // <Box
+        //     transitionProperty="transform"
+        //     transitionDuration=".3s"
+        //     transitionTimingFunction="ease-in-out"
+        //     backgroundColor="#FFFFFF"
+        //     >
+        <Box maxWidth="1280px" margin="0 auto" borderBottom='1px' borderColor='gray.200'>
         <HStack
-            px={16}
             py={4}
             justifyContent="space-between"
             alignItems="center">
-            <nav>       
-                <HStack spacing={8}>
-                    <span>Gradful</span>
-                    <a href="https://github.com" className="nav-item">
-                    <FontAwesomeIcon icon={faGithub} size="2x"/> </a>
-                    <a href="https://www.linkedin.com" className="nav-item">
-                    <FontAwesomeIcon icon={faLinkedin} size="2x"/> </a>
+            <nav>     
+                <HStack spacing={8} >
+                <ChakraLink as={ReactRouterLink} to='/'>
+                    <img src = {gradful_logo_temp}
+                    alt="home"
+                    height={42}
+                    width={135} />
+                </ChakraLink>
+                    <Link to="/personalize" ><Text className="nav-item" margin='auto' fontSize='s'>personalize</Text></Link>
                 </HStack>
             </nav>
             <nav>
-                <HStack spacing={8}>
-                    <a href="#projects" className="nav-item" onClick={handleClick("about")}>About</a>
-                    <a href="login" className="nav-item" onClick={handleClick("login")}>login</a>
-                    <a href="login" className="nav-item" onClick={handleClick("logout")}>logout</a>
+                <HStack spacing={8} fontSize='s'>
+                    <a href="#projects" className="nav-item" onClick={handleClick("about")}>about</a>
+                    <a href="login" className="nav-item" onClick={null}>login</a>
+                    <a href="Signup" className="nav-item" onClick={null}>signup</a>
                 </HStack>
             </nav>
-            
-            </HStack>
-            </Box>
-            </Box>
+
+        </HStack>
+        </Box>
+        // </Box>
         );
     };
     export default Header;
