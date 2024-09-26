@@ -3,11 +3,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import gradful_logo_temp from '../images/gradful_logo_temp.gif'
-import { Box, Heading, HStack, Text } from "@chakra-ui/react";
+import { Box, Heading, HStack, Image, Text } from "@chakra-ui/react";
 import { Routes, Route, Link } from "react-router-dom";
 
 import { Link as ReactRouterLink } from 'react-router-dom'
 import { Link as ChakraLink, LinkProps } from '@chakra-ui/react'
+import { px } from "framer-motion";
 
 const Header = () => {
     const handleClick = (anchor) => () => {
@@ -28,7 +29,7 @@ const Header = () => {
         //     transitionTimingFunction="ease-in-out"
         //     backgroundColor="#FFFFFF"
         //     >
-        <Box maxWidth="1280px" margin="0 auto" borderBottom='1px' borderColor='gray.200'>
+        <Box  margin="0 auto" borderBottom='1px' borderColor='gray.200'>
         <HStack
             py={4}
             justifyContent="space-between"
@@ -36,10 +37,14 @@ const Header = () => {
             <nav>     
                 <HStack spacing={8} >
                 <ChakraLink as={ReactRouterLink} to='/'>
-                    <img src = {gradful_logo_temp}
+
+                    <Image src = {gradful_logo_temp}
                     alt="home"
-                    height={42}
-                    width={135} />
+                    // boxSize={['150px', '200px']}                    
+                    // height={[42, 100]}
+                    width={[70, 135]} 
+                    />
+
                 </ChakraLink>
                     <Link to="/personalize" ><Text className="nav-item" margin='auto' fontSize='s'>personalize</Text></Link>
                 </HStack>

@@ -23,7 +23,7 @@ export const ListItem = (props: StackProps) => {
 
 export function Pricing() {
     return (
-    <Box mx='4'>
+    <Box m='4'>
         <Box maxW='500px' margin='auto' mt='-200' borderRadius='12px' overflow='hidden' boxShadow=''>
             <Flex direction={['column', 'column', 'row']}>
                 <Box bg='#F0EAFB' p='30px'>

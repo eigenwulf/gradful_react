@@ -7,7 +7,7 @@ import { Container, Box, } from "@chakra-ui/react";
 
 function Home() {
     return (
-    <Container maxW='1000px'>
+    <Container width={[400, 700, 1200]} maxW='1000px'>
         <Header />
         <LandingSection />
         <Footer />
