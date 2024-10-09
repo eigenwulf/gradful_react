@@ -1,0 +1,14 @@
+nodejs, nvm, npm: https://nodejs.org/en/download/package-manager
+npm i react-bootstrap
+npm i react-router-dom
+npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
+npm install formik --save
+npm i @fortawesome/react-fontawesome
+npm i @fortawesome/free-solid-svg-icons
+npm i @fortawesome/free-brands-svg-icons
+npm i @chakra-ui/icons
+
+Extensions:
+Prettier
+ES7+React/Redux
+indent-rainbow
