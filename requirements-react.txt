@@ -1,4 +1,7 @@
 nodejs, nvm, npm: https://nodejs.org/en/download/package-manager
+    node -V // version of node
+npm-init -y: creates a package.json file
+npm i bootstrap
 npm i react-bootstrap
 npm i react-router-dom
 npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
