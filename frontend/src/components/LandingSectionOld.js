@@ -1,10 +1,13 @@
 import React from "react";
 import { Avatar, Center, Container, Box, Button, Flex, Grid, GridItem, Heading, HStack, Image, ListItem, SimpleGrid, Stack, VStack, Text } from "@chakra-ui/react";
 
+import { HamburgerIcon } from '@chakra-ui/icons'
 import landing_image_temp from '../images/landing_image_temp.jpg';
 
+
 const LandingSection = () => (
-<SimpleGrid  columns={[1, 2]} spacing={1} m='2'>
+<>
+<SimpleGrid height={['450px']} columns={[1, 2]} spacing={1} mb='20px'>
 <Box bg='tomato' height={[20, 400 ]}>
 	<Heading 
 	as='h5' 
@@ -14,26 +17,49 @@ const LandingSection = () => (
 	
 	>Send Graduation Announcements in the Mail for Free</Heading>
 </Box>
-<Box bg='tomato' height='400px'>
+<Box bg='tomato' height='400px' >
 
-	<Center boxWidth='100%' pt='3em'>
+	<Center boxWidth='100%' pt='8em'>
 	<Image
-        width='100%'
+        width={[200, 400, 700 ]}
         borderRadius='lg'
         // objectFit='cover'
         src={landing_image_temp}
-        alt='Landing'/>
+        alt='Cards'/>
     </Center>
-
     <Center>
     <Button colorScheme='purple' size={['sm','md']} w='100px' mt='1em' >Get Started</Button>
 	</Center>
 </Box>
 </SimpleGrid>
 
+<Box bg='#CCD9BA' mt='16px'>
+	<Box margin='auto' overflow='hidden' boxShadow=''>        
+            <Flex direction={['column', 'row', 'row']}>
+                <Box  p='30px' border='1px'>
+                    <Text fontSize='18px' fontWeight='800'>Premium Pro</Text>
+                    <Heading as='h3' fontSize={['xl', '2xl', '3xl']}>$329</Heading>
+                    <Text color="#171923" fontSize='18px' fontWeight='500'>billed just once</Text>
+                    
+                </Box>
+
+                <Box bg='#CCD9BA' p='60px' fontSize='16px' border='1px'>
+                    <Text textAlign='left' fontSize={['s', 's', 'l']}>
+                        Access these features when you get this pricing package.
+                    </Text>
+
+                </Box>
+
+            </Flex>
+    </Box>    
+</Box>
+</>
+
 );
 
 export default LandingSection;
+
+
 
 
 // <Grid

@@ -8,6 +8,7 @@ import { Routes, Route, Link } from "react-router-dom";
 
 import { Link as ReactRouterLink } from 'react-router-dom'
 import { Link as ChakraLink, LinkProps } from '@chakra-ui/react'
+import { HamburgerIcon } from '@chakra-ui/icons'
 import { px } from "framer-motion";
 
 const Header = () => {
@@ -29,20 +30,21 @@ const Header = () => {
         //     transitionTimingFunction="ease-in-out"
         //     backgroundColor="#FFFFFF"
         //     >
-        <Box  margin="0 auto" borderBottom='1px' borderColor='gray.200'>
+        <Box  m='2' borderBottom='1px' borderColor='gray.200'>
         <HStack
+            mx='8'
             py={4}
             justifyContent="space-between"
             alignItems="center">
             <nav>     
                 <HStack spacing={8} >
-                <ChakraLink as={ReactRouterLink} to='/'>
+                <ChakraLink as={ReactRouterLink} to='/'width={[70, 135]} >
 
                     <Image src = {gradful_logo_temp}
                     alt="home"
                     // boxSize={['150px', '200px']}                    
                     // height={[42, 100]}
-                    width={[70, 135]} 
+                    
                     />
 
                 </ChakraLink>
@@ -63,4 +65,6 @@ const Header = () => {
         );
     };
     export default Header;
+    
+
     
