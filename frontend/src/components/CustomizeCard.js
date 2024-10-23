@@ -5,11 +5,12 @@ import { Avatar, Center, Container, Box, Button, Flex, Grid, GridItem, Heading, 
 import landing_image_temp from '../images/landing_image_temp.jpg';
 // import vintage-paper-03 from '../images/backgrounds/vintage-paper-03.jpg';
 
-const [show, setShow] = useState(true);
-const Customize = () => (
-    <Box height='500px' m='2'
+function CustomizeCard() {
+    const [show, setShow] = useState(true);
+    return(
+        <Box height='500px' m='2' borderBottom='1px' borderColor='gray.200'
         // bgImage={vintage-paper-03}
-        bgImage="url('../images/backgrounds/vintage-paper-03.jpg')"
+        bgImage="url('../images/backgrounds/vintage-paper-04.jpg')"
         bgPosition="center"
         bgRepeat="repeat">
 
@@ -35,6 +36,7 @@ const Customize = () => (
 
         </Center>
     </Box>
-);
+    );
+}
 
-export default Customize;
+export default CustomizeCard;

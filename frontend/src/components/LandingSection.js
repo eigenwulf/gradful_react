@@ -24,18 +24,15 @@ const LandingSection = () => (
         src={landing_image_temp}
         alt='Landing'/>
     </Center>
-
-    <Center>
-    <Button colorScheme='purple' size={['sm','md']} w='100px' mt='1em' >Get Started</Button>
-	</Center>
 </Box>
 </SimpleGrid>
 
 );
 
+
 export default LandingSection;
 
-
+// <Button colorScheme='purple' size={['sm','md']} w='100px' mt='1em' >Get Started</Button>
 // <Grid
 // h='450px'
 // // templateRows='420px 10px'
