@@ -3,19 +3,19 @@ import { Route, Routes } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import Home from "./pages/Home";
 import Personalize from "./pages/Personalize";
-// import GalleryContext from './store/GalleryContext.js'
-
+import { GalleryProvider } from './store/GalleryContext.js'
 
 function App() {
   return (
   <ChakraProvider>
-
+  <GalleryProvider>
+  
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/personalize" element={<Personalize />} />
     </Routes>
 
-
+  </GalleryProvider>
   </ChakraProvider>
   );
   }

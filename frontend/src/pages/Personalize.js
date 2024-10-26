@@ -7,11 +7,16 @@ import { Container } from "@chakra-ui/react";
 
 function Personalize() {
     return (
+
     <Container maxW='1200px'>
+
         <Header />
         <CustomizeCard />
         <Gallery />
+
     </Container>
+
+
     );  
     }
 export default Personalize;
