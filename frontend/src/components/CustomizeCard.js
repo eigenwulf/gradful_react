@@ -3,17 +3,22 @@ import { useState } from "react";
 import { Avatar, Center, Container, Box, Button, Flex, Grid, GridItem, Heading, HStack, Image, ListItem, SimpleGrid, Stack, VStack, Text } from "@chakra-ui/react";
 
 import landing_image_temp from '../images/landing_image_temp.jpg';
+import { useGalleryContext } from "../store/GalleryContext";
 // import vintage-paper-03 from '../images/backgrounds/vintage-paper-03.jpg';
 
 function CustomizeCard() {
     const [show, setShow] = useState(true);
+    const { selectedCard } = useGalleryContext();
     return(
         <Box height='500px' m='2' borderBottom='1px' borderColor='gray.200'
         // bgImage={vintage-paper-03}
         bgImage="url('../images/backgrounds/vintage-paper-04.jpg')"
         bgPosition="center"
         bgRepeat="repeat">
-
+        <p>
+        {(selectedCard !==null) ? (<h2> Selected Card Id: {selectedCard} </h2>)  :
+        (<h2>No image selected</h2>) }
+        </p>
         <Center boxWidth='100%' 
         pt='3em'>
             <Image
