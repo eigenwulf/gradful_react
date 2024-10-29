@@ -24,15 +24,15 @@ function Gallery () {
     };
 
     return(
-        <Box>
+        <Box mt='1'>
 
-        <Box bg='#CCD9BA' p='2px' fontSize='16px' border='1px'>
+        <Box bg='#CCD9BA' p='2px' fontSize='16px' mt='1px' border='1px'>
             <Text textAlign='center' fontSize={['s', 's', 'l']}>
             Stationary Styles
             </Text>
         </Box>
 
-        <SimpleGrid  columns={[2, 4]} spacing={1} m='2' border='1px' borderColor='gray.200'> 
+        <SimpleGrid  columns={[2, 4]} spacing={1} m='' border='1px' borderColor='gray.200'> 
         
             {cards.map((card) => (
             <Box>

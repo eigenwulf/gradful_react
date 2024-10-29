@@ -2,14 +2,40 @@ import React from "react";
 import { useState } from "react";
 import { Avatar, Center, Container, Box, Button, Flex, Grid, GridItem, Heading, HStack, Image, ListItem, SimpleGrid, Stack, VStack, Text } from "@chakra-ui/react";
 
-import landing_image_temp from '../images/landing_image_temp.jpg';
 import { useGalleryContext } from "../store/GalleryContext";
-// import vintage-paper-03 from '../images/backgrounds/vintage-paper-03.jpg';
+import Card_Example_blank from '../images/Card_Example_blank.png';
 
 function CustomizeCard() {
     const [show, setShow] = useState(true);
     const { selectedCard } = useGalleryContext();
     return(
+        <>
+<SimpleGrid  height={[100, 500 ]} columns={[1, 2]} spacing={0} mx='2'>
+	<Box  border='1px'>
+	<Center boxWidth='100%' pt='3em'>
+		<Image
+			width='100%'
+			borderRadius='lg'
+			// objectFit='cover'
+			src={Card_Example_blank}
+			alt='Landing'/>
+	</Center>
+	</Box>
+	{/* as prop: gives the chakra component the property of the 'as' HTML tag */}
+
+	<Box border='1px'>
+		<Center boxWidth='100%' pt='3em'>
+		<Image
+			width='100%'
+			borderRadius='lg'
+			// objectFit='cover'
+
+			alt='Landing'/>
+		</Center>
+	</Box>
+</SimpleGrid>
+
+
         <Box height='500px' m='2' borderBottom='1px' borderColor='gray.200'
         // bgImage={vintage-paper-03}
         bgImage="url('../images/backgrounds/vintage-paper-04.jpg')"
@@ -19,15 +45,7 @@ function CustomizeCard() {
         {(selectedCard !==null) ? (<h2> Selected Card Id: {selectedCard} </h2>)  :
         (<h2>No image selected</h2>) }
         </p>
-        <Center boxWidth='100%' 
-        pt='3em'>
-            <Image
-                width='40%'
-                borderRadius='lg'
-                // objectFit='cover'
-                src={landing_image_temp}
-                alt='Landing'/>
-        </Center>
+
 
         <Center>
             <Button 
@@ -41,6 +59,7 @@ function CustomizeCard() {
 
         </Center>
     </Box>
+    </>
     );
 }
 

@@ -24,13 +24,8 @@ const Header = () => {
     };
 
     return (
-        // <Box
-        //     transitionProperty="transform"
-        //     transitionDuration=".3s"
-        //     transitionTimingFunction="ease-in-out"
-        //     backgroundColor="#FFFFFF"
-        //     >
-        <Box  m='2' borderBottom='1px' borderColor='gray.200'>
+
+        <Box  m='' borderBottom='1px' borderColor='gray.200'>
         <HStack
             mx='8'
             py={4}

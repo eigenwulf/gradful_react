@@ -1,32 +1,49 @@
 import React from "react";
 import { Avatar, Center, Container, Box, Button, Flex, Grid, GridItem, Heading, HStack, Image, ListItem, SimpleGrid, Stack, VStack, Text } from "@chakra-ui/react";
-
-import landing_image_temp from '../images/landing_image_temp.jpg';
+import landing from '../images/backgrounds/landing.png';
 
 const LandingSection = () => (
-<SimpleGrid  columns={[1, 2]} spacing={1} m='2'>
-<Box bg='tomato' height={[20, 400 ]}>
+
+// breakpoints 
+// base: 0em, 0px, sm: 30em, 480px, md: 48em, 768px, xl: 80em, 1280px */}
+
+<Box mb=''>
+<Box bg='#CCD9BA' height={ [20, 20]} m='' border='1px'> 
+	<Center>
 	<Heading 
-	as='h5' 
-	size='xs' 
-	textAlign={[ 'left', 'center' ]}
-	mt={['2em', '8em']}
+		as='h5' 
+		size={['xs','s']}
+		color='#443428' 
+		textAlign='center'
+		pt='1em'
+		>Send Graduation Announcements in the Mail for Free</Heading> 
+		</Center>
+</Box>
 	
-	>Send Graduation Announcements in the Mail for Free</Heading>
-</Box>
-<Box bg='tomato' height='400px'>
-
-	<Center boxWidth='100%' pt='3em'>
+<Box bg='#CCD9BA' height={[20, 310 ]} mb=''>
+<Center boxWidth='100%'>
 	<Image
-        width='100%'
-        borderRadius='lg'
-        // objectFit='cover'
-        src={landing_image_temp}
-        alt='Landing'/>
-    </Center>
+		width='100%'
+		borderRadius=''
+		// objectFit='cover'
+		src={landing}
+		alt='Landing'/>
+	</Center>
 </Box>
-</SimpleGrid>
+<Box height={[20, 50 ]} m='' border='1px' bg='white'>
+<Center>
+	<Heading 
+		as='h7' 
+		size={['xs','xs']}
+		color='#443428' 
+		textAlign='center'
+		pt='1em'
+		>You personalize online. We print and mail with a packet of special offers, all for free. Send it online too.</Heading> 
+		</Center>
+</Box>
 
+
+</Box>
 );
 
 
