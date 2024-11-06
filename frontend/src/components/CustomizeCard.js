@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Avatar, Center, Container, Box, Button, Flex, Grid, GridItem, Heading, HStack, Image, Input, ListItem, SimpleGrid, Stack, VStack, Text } from "@chakra-ui/react";
 
 import { useGalleryContext } from "../store/GalleryContext";
-import Card_Example_blank from '../images/Card_Example_blank.png';
+import Card_Example_blank from '../images/gallery/Card_Example_blank.png';
 
 const EditableText = ({ text, onTextChange }) => {
     const [isEditing, setIsEditing] = useState(false);
@@ -23,7 +23,7 @@ const EditableText = ({ text, onTextChange }) => {
     };
 
     return (
-        <VStack position="relative">
+        <VStack position='relative'>
             {isEditing ? (
                 <Input
                     value={tempText}
@@ -54,6 +54,7 @@ const EditableText = ({ text, onTextChange }) => {
 
 
 function CustomizeCard() {
+    const { selectedCard } = useGalleryContext();
     const [texts, setTexts] = useState([
         'Editable Text 1',
         'Editable Text 2',
@@ -68,6 +69,7 @@ function CustomizeCard() {
     };
 
     return (
+    <Box> 
     <Box position='relative' height={[100, 600]} border='1px' p='1' m='1'>
         <Center boxSize='100%'>
             <Image
@@ -86,6 +88,21 @@ function CustomizeCard() {
             ))
         }
         </VStack>
+        <p>
+        {(selectedCard !==null) ? (<h5> Selected Card: {selectedCard} </h5>)  :
+        (<h5>No image selected</h5>) }
+        </p>
+    </Box>
+
+    <Center>
+            <Button 
+            colorScheme='purple' 
+            size={['sm','md']} 
+            mt='1em'>
+                Save and Next        
+            </Button>
+        </Center>
+
     </Box>
     );
 };
@@ -164,14 +181,14 @@ export default CustomizeCard;
 //         bgPosition="center"
 //         bgRepeat="repeat">
 
-//         <Center>
-//             <Button 
-//             colorScheme='purple' 
-//             size={['sm','md']} 
-//             w='100px' 
-//             mt='1em' />
+        // <Center>
+        //     <Button 
+        //     colorScheme='purple' 
+        //     size={['sm','md']} 
+        //     w='100px' 
+        //     mt='1em' />
 
-//         </Center>
+        // </Center>
 //     </Box>
 //     <p>
 //         {(selectedCard !==null) ? (<h2> Selected Card Id: {selectedCard} </h2>)  :

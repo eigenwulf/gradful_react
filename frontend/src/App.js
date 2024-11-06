@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import Home from "./pages/Home";
 import Personalize from "./pages/Personalize";
+import Recipients from "./pages/Recipients";
 import { GalleryProvider } from './store/GalleryContext.js'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/personalize" element={<Personalize />} />
+      <Route path="/recipients" element={<Recipients />} />
     </Routes>
 
   </GalleryProvider>

@@ -1,26 +1,27 @@
 import React, { useContext } from "react";
 import { Avatar, Center, Container, Box, Button, Flex, Grid, GridItem, Heading, HStack, Image, ListItem, SimpleGrid, Stack, VStack, Text } from "@chakra-ui/react";
-import card_placeholder from '../images/card_placeholder.png';
 
 import { useGalleryContext } from '../store/GalleryContext.js';
 
+import card_pic from '../images/gallery/card_placeholder.png';
+
 const cards = [
-    { id: 1, src: {card_placeholder}, card_style: "special card 1" },
-    { id: 2, src: '../images/card_placeholder.png', card_style: "special card 1" },
-    { id: 3, src: '../images/card_placeholder.png', card_style: "special card 1" },
-    { id: 4, src: '../images/card_placeholder.png', card_style: "special card 1" },
-    { id: 5, src: '../images/card_placeholder.png', card_style: "special card 1" },
-    { id: 6, src: '../images/card_placeholder.png', card_style: "special card 1" },
-    { id: 7, src: '../images/card_placeholder.png', card_style: "special card 1" },
-    { id: 8, src: '../images/card_placeholder.png', card_style: "special card 1" },
+    { id: 1, src: '../images/gallery/card_placeholder.png', card_style: "special card 1" },
+    { id: 2, src: '../images/gallery/card_placeholder.png', card_style: "special card 2" },
+    { id: 3, src: '../images/gallery/card_placeholder.png', card_style: "special card 3" },
+    { id: 4, src: '../images/gallery/card_placeholder.png', card_style: "special card 4" },
+    { id: 5, src: '../images/gallery/card_placeholder.png', card_style: "special card 1" },
+    { id: 6, src: '../images/gallery/card_placeholder.png', card_style: "special card 1" },
+    { id: 7, src: '../images/gallery/card_placeholder.png', card_style: "special card 1" },
+    { id: 8, src: '../images/gallery/card_placeholder.png', card_style: "special card 1" },
     ];
 
 function Gallery () {
     const { selectedCard, setSelectedCard } = useGalleryContext();
     // same as: const setSelectedCard=useGalleryContext().setSelectedCard;
 
-    const handleClick = (id) => {
-        setSelectedCard(id);
+    const handleClick = (src) => {
+        setSelectedCard(src);
     };
 
     return(
@@ -38,10 +39,11 @@ function Gallery () {
             <Box>
             <Image
             key={card.id}
-            src={card_placeholder}
+            // src = "../images/gallery/card_placeholder.png"
+            src="../images/gallery/card_placeholder.png"
             alt={`Image ${card.card_style}`}
             // onClick={() => {setSelectedCard(image.id);} }
-            onClick={() => handleClick(card.id)}
+            onClick={() => handleClick(card.src)}
             style={{ margin: '6px' }}
             />
             <Text textAlign='center'>{card.card_style}</Text>

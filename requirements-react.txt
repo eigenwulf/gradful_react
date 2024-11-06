@@ -6,6 +6,7 @@ npm i react-bootstrap
 npm i react-router-dom
 npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
 npm install formik --save
+npm install yup --save
 npm i @fortawesome/react-fontawesome
 npm i @fortawesome/free-solid-svg-icons
 npm i @fortawesome/free-brands-svg-icons
