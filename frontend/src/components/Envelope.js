@@ -6,14 +6,12 @@ import ReactDOM from 'react-dom';
 import { Formik, Form, useField, Field, ErrorMessage} from 'formik';
 import * as Yup from 'yup';
 
-
 const Envelope = ()=>{
     return (
     <Box>
     <Center >
         <Box position="relative" maxWidth="800px"border='1px' m="1">
             {/* Image background */}
-
             <Image
             position="relative"
             // objectFit="cover"
@@ -54,7 +52,7 @@ const Envelope = ()=>{
                     .max(9, 'Must be 9 characters or less')
                     .required('Required'),
                     })}
-                onSubmit={(values, { setSubmitting }) => {
+                onSubmit={ (values, { setSubmitting }) => {
                         setTimeout(() => {
                             alert(JSON.stringify(values, null, 2));
                             setSubmitting(false);
